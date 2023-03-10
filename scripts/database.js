@@ -1,5 +1,5 @@
-let database =[
-    paintColor =[
+let database = {
+    paintColor:[
         {
             id: 1,
             color: "silver",
@@ -21,7 +21,7 @@ let database =[
             price: 1800
         },
     ],
-    interior =[
+    interior:[
         {
             id: 1,
             fabric: "beige fabric",
@@ -43,7 +43,7 @@ let database =[
             price: 1000
         }
     ],
-    tech=[
+    tech:[
         {
             id: 1,
             techPack: "basic package",
@@ -65,28 +65,42 @@ let database =[
             price: 1000
         }
     ],
-    wheels =[
+    wheels:[
         {
-            id:1,
-            wheel: "17-inch Pair Radial",
+            id: 1,
+            wheelStyle: "17-inch Pair Radial",
             price: 250
         },
         {
-            id:2,
-            wheel: "17-inch Pair Radial Black",
+            id: 2,
+            wheelStyle: "17-inch Pair Radial Black",
             price: 300
         },
         {
-            id:3,
-            wheel: "18-inch Pair Spoke Silver",
+            id: 3,
+            wheelStyle: "18-inch Pair Spoke Silver",
             price: 400
         },
         {
-            id:4,
-            wheel: "18-inch Pair Spoke Black",
+            id: 4,
+            wheelStyle: "18-inch Pair Spoke Black",
             price: 600
         }
-    ]
+    ],
+    carOrders:[
 
-    
-]
+    ]
+}
+
+export const getPaint = () => {
+    return database.paintColor.map(paintColor => ({ ...paintColor}))
+}
+export const getInterior = () => {
+    return database.interior.map(interior => ({ ...interior }))
+}
+export const getTech = () => {
+    return database.tech.map(tech => ({ ...tech }))
+}
+export const getWheels = () => {
+    return database.wheels.map(wheels => ({ ...wheels }))
+}
